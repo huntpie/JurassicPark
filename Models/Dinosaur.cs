@@ -2,7 +2,7 @@ using System;
 
 namespace JurassicPark
 {
-  public class Dinosaur
+  class Dinosaur
   {
     //Name: string047
 

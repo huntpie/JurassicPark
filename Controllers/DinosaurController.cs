@@ -11,11 +11,10 @@ using System.Globalization;
 
 namespace JurassicPark
 {
-  public class DinosaurController
+  class DinosaurController
   {
     private List<Dinosaur> Dinosaurs = new List<Dinosaur>();
     private List<string> Log = new List<string>();
-
     public void SaveAllDinosaurs()
     {
       var writer = new StreamWriter("dinosaurs.csv");
@@ -26,7 +25,6 @@ namespace JurassicPark
 
       writer.Close();
     }
-
     public void LoadAllDinosaurs()
     {
       if (File.Exists("dinosaurs.csv"))
@@ -38,6 +36,7 @@ namespace JurassicPark
         Dinosaurs = csvReader.GetRecords<Dinosaur>().ToList();
       }
     }
+
 
     //return the list of dinosaurs
     public IEnumerable<Dinosaur> AllDinosaurs()
@@ -97,11 +96,22 @@ namespace JurassicPark
     //Summary - output the number of herbivores and carnivores
     public void FindDinosaurByDietType(string dietType)
     {
-      Log.Add($"Someone looked for the number of {dietType}s");
-      var foundCarn = Dinosaurs.FindAll(dinosaur => dinosaur.DietType == dietType);
-      var carnCount = foundCarn.Count();
-      Log.Add($"The park has {carnCount} carnivore(s)");
-      return;
+      int hCount = 0;
+      int cCount = 0;
+      for (int index = 0; index < Dinosaurs.Count; index++)
+      {
+
+        var dino1 = Dinosaurs[index];
+        if (dino1.DietType == "herbivore")
+        {
+          hCount++;
+        }
+        else
+        {
+          cCount++;
+        }
+      }
+      Console.WriteLine($"Number of Carnivores in the Park: {cCount}. Number of Herbivores: {hCount}");
     }
 
     //Given a WhenAcquired date of a dinosaur, return the dinosaurs after that date, or null if nothing found
@@ -111,25 +121,25 @@ namespace JurassicPark
 
 
 
-    public void PrintLog()
-    {
-      foreach (var log in Log)
-      {
-        Console.WriteLine(log);
-      }
-    }
+    // public void PrintLog()
+    // {
+    //  foreach (var log in Log)
+    //  {
+    //   Console.WriteLine(log);
+    // }
+    //  }
 
 
     public void Seed()
     {
-      //DateTime localDate1 = DateTime.Now;
+      DateTime localDate1 = DateTime.Now;
       //Add some dinosaurs to our database of dinosaurs
 
       var trex = new Dinosaur
       {
         Name = "T-Rex",
         DietType = "carnivore",
-        // WhenAcquired = localDate1,
+        WhenAcquired = localDate1,
         Weight = 25000,
         EnclosureNumber = 9,
       };
@@ -138,7 +148,7 @@ namespace JurassicPark
       {
         Name = "Raptor",
         DietType = "carnivore",
-        // WhenAcquired = localDate1,
+        WhenAcquired = localDate1,
         Weight = 3500,
         EnclosureNumber = 10,
       };
@@ -147,7 +157,7 @@ namespace JurassicPark
       {
         Name = "Triceratops",
         DietType = "herbivore",
-        //WhenAcquired = localDate1,
+        WhenAcquired = localDate1,
         Weight = 13000,
         EnclosureNumber = 8,
       };
@@ -156,7 +166,7 @@ namespace JurassicPark
       {
         Name = "Brachiosaurus",
         DietType = "herbivore",
-        //WhenAcquired = localDate1,
+        WhenAcquired = localDate1,
         Weight = 37000,
         EnclosureNumber = 5,
       };

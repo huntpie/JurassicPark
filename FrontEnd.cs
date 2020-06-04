@@ -2,7 +2,7 @@ using System;
 
 namespace JurassicPark
 {
-  public class FrontEnd
+  class FrontEnd
   {
     private DinosaurController OurDinosaursController;
 
@@ -135,8 +135,9 @@ namespace JurassicPark
             break;
 
           case "S":
-            string carnivoreString = "carnivore";
-            OurDinosaursController.FindDinosaurByDietType(carnivoreString);
+
+            OurDinosaursController.FindDinosaurByDietType("carnivore");
+
 
 
             break;

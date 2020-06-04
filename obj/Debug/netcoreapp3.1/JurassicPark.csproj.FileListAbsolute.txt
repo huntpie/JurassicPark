@@ -1,0 +1,14 @@
+/Users/piercehunt/Desktop/sdg/JurassicPark/obj/Debug/netcoreapp3.1/JurassicPark.csprojAssemblyReference.cache
+/Users/piercehunt/Desktop/sdg/JurassicPark/obj/Debug/netcoreapp3.1/JurassicPark.csproj.CoreCompileInputs.cache
+/Users/piercehunt/Desktop/sdg/JurassicPark/obj/Debug/netcoreapp3.1/JurassicPark.AssemblyInfoInputs.cache
+/Users/piercehunt/Desktop/sdg/JurassicPark/obj/Debug/netcoreapp3.1/JurassicPark.AssemblyInfo.cs
+/Users/piercehunt/Desktop/sdg/JurassicPark/bin/Debug/netcoreapp3.1/JurassicPark.deps.json
+/Users/piercehunt/Desktop/sdg/JurassicPark/bin/Debug/netcoreapp3.1/JurassicPark.runtimeconfig.json
+/Users/piercehunt/Desktop/sdg/JurassicPark/bin/Debug/netcoreapp3.1/JurassicPark.runtimeconfig.dev.json
+/Users/piercehunt/Desktop/sdg/JurassicPark/bin/Debug/netcoreapp3.1/JurassicPark.dll
+/Users/piercehunt/Desktop/sdg/JurassicPark/bin/Debug/netcoreapp3.1/JurassicPark.pdb
+/Users/piercehunt/Desktop/sdg/JurassicPark/obj/Debug/netcoreapp3.1/JurassicPark.dll
+/Users/piercehunt/Desktop/sdg/JurassicPark/obj/Debug/netcoreapp3.1/JurassicPark.pdb
+/Users/piercehunt/Desktop/sdg/JurassicPark/obj/Debug/netcoreapp3.1/JurassicPark.genruntimeconfig.cache
+/Users/piercehunt/Desktop/sdg/JurassicPark/bin/Debug/netcoreapp3.1/CsvHelper.dll
+/Users/piercehunt/Desktop/sdg/JurassicPark/obj/Debug/netcoreapp3.1/JurassicPark.csproj.CopyComplete

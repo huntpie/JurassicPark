@@ -9,14 +9,14 @@ namespace JurassicPark
 
       //create a new object that manages dinosaurs
       var dinosaurController = new DinosaurController();
-      dinosaurController.LoadAllDinosaurs();
+      dinosaurController.Seed();
 
       //new object that interacts with users
       var frontEnd = new FrontEnd(dinosaurController);
       frontEnd.Greeting();
       frontEnd.Menu();
 
-      dinosaurController.PrintLog();
+      //dinosaurController.PrintLog();
       dinosaurController.SaveAllDinosaurs();
     }
   }
