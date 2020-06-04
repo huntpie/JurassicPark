@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 
 namespace JurassicPark
 {
@@ -6,7 +6,18 @@ namespace JurassicPark
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Welcome to C#");
+
+      //create a new object that manages dinosaurs
+      var dinosaurController = new DinosaurController();
+      dinosaurController.LoadAllDinosaurs();
+
+      //new object that interacts with users
+      var frontEnd = new FrontEnd(dinosaurController);
+      frontEnd.Greeting();
+      frontEnd.Menu();
+
+      dinosaurController.PrintLog();
+      dinosaurController.SaveAllDinosaurs();
     }
   }
 }

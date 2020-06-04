@@ -1,6 +1,5 @@
 using System;
 
-
 namespace JurassicPark
 {
   public class Dinosaur
